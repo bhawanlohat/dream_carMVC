@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using dream_carMVC.Data;
 using dream_carMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace dream_carMVC.Controllers
 {
@@ -44,7 +45,7 @@ namespace dream_carMVC.Controllers
 
             return View(model);
         }
-
+        [Authorize]
         // GET: Models/Create
         public IActionResult Create()
         {
@@ -68,7 +69,7 @@ namespace dream_carMVC.Controllers
             ViewData["DealerId"] = new SelectList(_context.Dealer, "Id", "Dealer_Address", model.DealerId);
             return View(model);
         }
-
+        [Authorize]
         // GET: Models/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -121,7 +122,7 @@ namespace dream_carMVC.Controllers
             ViewData["DealerId"] = new SelectList(_context.Dealer, "Id", "Dealer_Address", model.DealerId);
             return View(model);
         }
-
+        [Authorize]
         // GET: Models/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

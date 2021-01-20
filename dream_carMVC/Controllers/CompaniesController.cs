@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using dream_carMVC.Data;
 using dream_carMVC.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace dream_carMVC.Controllers
 {
@@ -25,6 +26,7 @@ namespace dream_carMVC.Controllers
             return View(await _context.Company.ToListAsync());
         }
 
+        [Authorize]
         // GET: Companies/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -43,6 +45,7 @@ namespace dream_carMVC.Controllers
             return View(company);
         }
 
+        [Authorize]
         // GET: Companies/Create
         public IActionResult Create()
         {
@@ -64,7 +67,7 @@ namespace dream_carMVC.Controllers
             }
             return View(company);
         }
-
+        [Authorize]
         // GET: Companies/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -115,7 +118,7 @@ namespace dream_carMVC.Controllers
             }
             return View(company);
         }
-
+        [Authorize]
         // GET: Companies/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
