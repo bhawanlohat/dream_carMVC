@@ -45,7 +45,7 @@ namespace dream_carMVC.Controllers
 
             return View(specification);
         }
-        [Authorize]
+        [Authorize]// normal user cannot create data entry
         // GET: Specifications/Create
         public IActionResult Create()
         {
@@ -69,7 +69,7 @@ namespace dream_carMVC.Controllers
             ViewData["ModelId"] = new SelectList(_context.Model, "Id", "Model_Name", specification.ModelId);
             return View(specification);
         }
-        [Authorize]
+        [Authorize]// normal user cannot edit data entry
         // GET: Specifications/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -122,7 +122,7 @@ namespace dream_carMVC.Controllers
             ViewData["ModelId"] = new SelectList(_context.Model, "Id", "Model_Name", specification.ModelId);
             return View(specification);
         }
-        [Authorize]
+        [Authorize]// normal user cannot delete data entry
         // GET: Specifications/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

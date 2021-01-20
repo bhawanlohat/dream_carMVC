@@ -26,7 +26,7 @@ namespace dream_carMVC.Controllers
             return View(await _context.Company.ToListAsync());
         }
 
-        [Authorize]
+
         // GET: Companies/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -45,7 +45,7 @@ namespace dream_carMVC.Controllers
             return View(company);
         }
 
-        [Authorize]
+        [Authorize]// normal user cannot create data entry
         // GET: Companies/Create
         public IActionResult Create()
         {
@@ -67,7 +67,7 @@ namespace dream_carMVC.Controllers
             }
             return View(company);
         }
-        [Authorize]
+        [Authorize]// normal user cannot edit data entry
         // GET: Companies/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -118,7 +118,7 @@ namespace dream_carMVC.Controllers
             }
             return View(company);
         }
-        [Authorize]
+        [Authorize]// normal user cannot delete data entry
         // GET: Companies/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
