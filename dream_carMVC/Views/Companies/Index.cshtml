@@ -1,31 +1,31 @@
 ﻿@model IEnumerable<dream_carMVC.Models.Company>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Company ";
 }
 
-<h1>Index</h1>
+<h1>Companies</h1>
 
 <p>
     <a asp-action="Create">Create New Company</a>
 </p>
-<table class="table">
+<table class="table" width="50%">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Company_Name)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Company_Website)
+                Website
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Company_Phone)
+                Phone
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Company_Email)
+                Email
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Company_Headquater)
+                Headquater
             </th>
             <th></th>
         </tr>
