@@ -14,16 +14,16 @@
         <tr>
             <th>
                 Model
-            </th>
+            </th><!--display data on website -->
             <th>
                 Year
-            </th>
+            </th><!--display data on website -->
             <th>
                 Company
-            </th>
+            </th><!--display data on website -->
             <th>
                 Dealer
-            </th>
+            </th><!--display data on website -->
             <th></th>
         </tr>
     </thead>
@@ -33,20 +33,20 @@
             <tr>
                 <td>
                     @Html.DisplayFor(modelItem => item.Model_Name)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
                     @Html.DisplayFor(modelItem => item.Model_Year)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
                     @Html.DisplayFor(modelItem => item.Company_Id)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
                     @Html.DisplayFor(modelItem => item.Dealer.Dealer_Address)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |<!--to edit data-->
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |<!--to detail data-->
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a><!--to delete data-->
                 </td>
             </tr>
         }

@@ -14,19 +14,19 @@
         <tr>
             <th>
                 Name
-            </th>
+            </th><!--display data on website -->
             <th>
                 Website
-            </th>
+            </th><!--display data on website -->
             <th>
                 Phone
-            </th>
+            </th><!--display data on website -->
             <th>
                 Email
-            </th>
+            </th><!--display data on website -->
             <th>
                 Headquater
-            </th>
+            </th><!--display data on website -->
             <th></th>
         </tr>
     </thead>
@@ -35,24 +35,24 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Company_Name)
+                    @Html.DisplayFor(modelItem => item.Company_Name)<!--link where it is pickup from-->
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Company_Website)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
                     @Html.DisplayFor(modelItem => item.Company_Phone)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
                     @Html.DisplayFor(modelItem => item.Company_Email)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
                     @Html.DisplayFor(modelItem => item.Company_Headquater)
-                </td>
+                </td><!--link where it is pickup from-->
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> <!--to edit data-->|
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a><!--to detail data--> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a><!--to delete data-->
                 </td>
             </tr>
         }
